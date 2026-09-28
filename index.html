@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4d969">
+  <meta name="description" content="Yodel: Cincinnati-ish news from a city that exists mostly in our imagination. Entirely satire.">
+  <title>Yodel — The news, give or take</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="articles.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <div class="satire-banner"><span class="satire-banner__mark">!</span><strong>THIS IS SATIRE.</strong> Every story here is fictional, including the ones that sound plausible. <a href="#about">How we work <span aria-hidden="true">↗</span></a></div>
+    <header class="site-header">
+      <div class="header-top"><span>THE QUEEN CITY'S MOST QUESTIONABLE PAPER</span><span class="edition-date">SEPTEMBER 2026</span><span>VOL. 01 · NO. 01</span></div>
+      <div class="masthead"><a href="index.html" aria-label="Yodel home">YODEL<span class="masthead-dot">.</span></a><p>THE NEWS, GIVE OR TAKE.</p></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Front page</a>
+        <a href="archive.html">All stories</a>
+        <a href="archive.html?category=Transit">Transit</a>
+        <a href="archive.html?category=Food%20%26%20Drink">Food &amp; Drink</a>
+        <a href="#about">About Yodel</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="section-kicker"><span>GOOD MORNING, CINCINNATI (PROBABLY)</span><span>AN INDEPENDENTLY IMAGINED PUBLICATION</span></div>
+      <section class="lead-section" aria-labelledby="lead-heading">
+        <div class="lead-copy">
+          <div class="eyebrow"><span class="eyebrow-rule"></span> TODAY'S BIG IDEA <span id="feature-counter">01 / 03</span></div>
+          <p class="lead-overline" id="feature-category">FOOD &amp; DRINK · CINCINNATI</p>
+          <h1 id="lead-heading" aria-live="polite">Skyline Chili to Take Over GO Tower Cafeteria, Sources Confirm While Holding Crackers</h1>
+          <p class="lead-deck" id="feature-deck">A very local solution to the age-old question: what if lunch was also a civic identity?</p>
+          <div class="lead-actions"><a class="button button--dark" id="feature-link" href="article.html?id=go-tower-chili">Read the story <span aria-hidden="true">↗</span></a><button class="text-button" id="next-feature" type="button">Next headline <span aria-hidden="true">→</span></button></div>
+          <p class="lead-meta" id="feature-meta">BY ELLIS VALE · 4 MIN READ</p>
+        </div>
+        <div class="lead-art" aria-hidden="true">
+          <div class="art-topline"><span>ILLUSTRATION / THE CITY DESK</span><span>FIG. 01</span></div>
+          <svg class="skyline-art" viewBox="0 0 560 390" role="presentation">
+            <circle cx="405" cy="110" r="76" fill="#f9e9a2" stroke="#27251f" stroke-width="2"/>
+            <path d="M0 298h560M0 315h560M28 340h504M54 358h458" fill="none" stroke="#27251f" stroke-width="2"/>
+            <path d="M40 298V198h69v100m12 0V159h65v139m11 0V212h42v86m12 0V122h84v176m12 0V188h60v110m13 0V141h56v157m12 0V218h45v80" fill="#f5d96e" stroke="#27251f" stroke-width="3"/>
+            <path d="M266 122V80h54v42m-47-42V63h39v17m-20-17V31m-9 0h18" fill="none" stroke="#27251f" stroke-width="3"/>
+            <path d="M56 216h11m14 0h11m-36 23h11m14 0h11m43-58h12m17 0h12m-41 24h12m17 0h12m63-64h12m18 0h12m18 0h12m-72 26h12m18 0h12m18 0h12m-72 26h12m18 0h12m18 0h12m-72 26h12m18 0h12m18 0h12m53-32h13m20 0h13m-46 25h13m20 0h13m47-52h12m17 0h12m-41 26h12m17 0h12" fill="none" stroke="#27251f" stroke-width="3"/>
+            <path d="M100 298q35-19 75 0m154 0q30-17 65 0" fill="none" stroke="#27251f" stroke-width="2"/>
+            <path d="M90 346c60-9 100-9 155 0m82-1c58-8 98-8 148 0" fill="none" stroke="#27251f" stroke-width="1.5"/>
+            <path d="M26 377h95m316 0h96" stroke="#27251f" stroke-width="2"/>
+            <text x="280" y="378" text-anchor="middle" font-family="Georgia,serif" font-size="12" letter-spacing="3" fill="#27251f">CINCINNATI, MORE OR LESS</text>
+          </svg>
+          <div class="art-bottomline"><span>ALL THE NEWS THAT'S FIT TO INVENT</span><span>EST. IN GOOD FAITH</span></div>
+        </div>
+      </section>
+      <section class="latest-section" aria-labelledby="latest-heading">
+        <div class="section-heading"><div><span class="small-label">THE REST OF THE PAPER</span><h2 id="latest-heading">Latest dispatches<span class="heading-period">.</span></h2></div><a class="underlined-link" href="archive.html">Visit the archive <span aria-hidden="true">↗</span></a></div>
+        <div id="latest-stories" class="story-grid"></div>
+      </section>
+      <section class="departments" aria-labelledby="departments-heading">
+        <div class="department-intro"><span class="small-label">FIND YOUR BEAT</span><h2 id="departments-heading">Departments</h2><p>Every city has its stories. Ours just happen to be made up.</p></div>
+        <div class="department-links"><a href="archive.html?category=Food%20%26%20Drink"><span>01</span> Food &amp; Drink <span aria-hidden="true">↗</span></a><a href="archive.html?category=Transit"><span>02</span> Transit <span aria-hidden="true">↗</span></a><a href="archive.html?category=Workplace"><span>03</span> Workplace <span aria-hidden="true">↗</span></a><a href="archive.html?category=Civic%20Life"><span>04</span> Civic Life <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <section class="about-section" id="about" aria-labelledby="about-heading"><div><span class="small-label">A NOTE FROM THE MAKE-BELIEVE EDITOR</span><h2 id="about-heading">How Yodel works<span class="heading-period">.</span></h2></div><div><p>Yodel is an experiment in AI-assisted, human-reviewed satire. We start with a familiar local detail, follow it somewhere absurd, and label the result clearly. No story on this site is a real news report.</p><a class="underlined-link" href="EDITORIAL_WORKFLOW.md">Read the proposed editorial workflow <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer"><div class="footer-main"><a class="footer-logo" href="index.html">YODEL<span>.</span></a><p>A little newsprint. A lot of imagination.<br>Made for Cincinnati, not mistaken for the news.</p><a href="archive.html">Explore all stories <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><strong>FICTION &amp; SATIRE — NOT REAL NEWS.</strong><span>© 2026 YODEL · AN UNREAL PUBLICATION</span><a href="#main">Back to top ↑</a></div></footer>
+  </div>
+</body>
+</html>
