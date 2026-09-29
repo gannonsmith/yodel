@@ -1,29 +1,39 @@
 (function () {
   "use strict";
 
-  const articles = window.YODEL_ARTICLES;
+  const articles = Array.isArray(window.YODEL_ARTICLES)
+    ? window.YODEL_ARTICLES.filter((article) => article && typeof article === "object" && typeof article.id === "string")
+    : [];
   const page = document.body.dataset.page;
   const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[character]);
   const articleURL = (article) => `article.html?id=${encodeURIComponent(article.id)}`;
-  const formatDate = (date) => new Intl.DateTimeFormat("en-US", {
+  const isISODate = (date) => {
+    if (typeof date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
+    const parsed = new Date(`${date}T12:00:00Z`);
+    return !Number.isNaN(parsed.valueOf()) && parsed.toISOString().slice(0, 10) === date;
+  };
+  const formatDate = (date) => isISODate(date) ? new Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric", year: "numeric", timeZone: "UTC"
-  }).format(new Date(`${date}T12:00:00Z`));
+  }).format(new Date(`${date}T12:00:00Z`)) : "Date unavailable";
+  const newestArticle = articles.reduce((newest, article) =>
+    isISODate(article.date) && (!newest || article.date > newest.date) ? article : newest, null);
 
   document.querySelectorAll(".edition-date").forEach((element) => {
-    element.textContent = new Intl.DateTimeFormat("en-US", {
-      weekday: "long", month: "long", day: "numeric", year: "numeric"
-    }).format(new Date()).toUpperCase();
+    element.textContent = newestArticle ? formatDate(newestArticle.date).toUpperCase() : "EDITION DATE UNAVAILABLE";
+  });
+  document.querySelectorAll('meta[name="date"]').forEach((element) => {
+    element.content = newestArticle ? newestArticle.date : "";
   });
 
   function storyCard(article, index) {
     return `<article class="story-card">
       <div class="story-card__top"><span>${String(index + 1).padStart(2, "0")} / THE DISPATCH</span><span aria-hidden="true">✳</span></div>
-      <p class="story-category">${escapeHTML(article.category)}</p>
-      <h3><a href="${articleURL(article)}">${escapeHTML(article.title)}</a></h3>
-      <p class="story-deck">${escapeHTML(article.deck)}</p>
-      <div class="story-card__foot"><span>${escapeHTML(formatDate(article.date))}</span><a href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title)}">READ <span aria-hidden="true">↗</span></a></div>
+      <p class="story-category">${escapeHTML(article.category || "Uncategorized")}</p>
+      <h3><a href="${articleURL(article)}">${escapeHTML(article.title || "Untitled story")}</a></h3>
+      <p class="story-deck">${escapeHTML(article.deck || "")}</p>
+      <div class="story-card__foot"><span>${escapeHTML(formatDate(article.date))}</span><a href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title || "Untitled story")}">READ <span aria-hidden="true">↗</span></a></div>
     </article>`;
   }
 
@@ -31,44 +41,77 @@
     const featured = articles.slice(0, 3);
     let current = 0;
     const nextButton = document.getElementById("next-feature");
-    const heading = document.getElementById("lead-heading");
     function showFeature() {
       const article = featured[current];
+      if (!article) {
+        document.getElementById("feature-copy").innerHTML = `<p class="lead-overline">YODEL · CINCINNATI</p><h1 id="lead-heading">No stories are available in this edition.</h1><p class="lead-deck">The local story file is empty or unavailable.</p>`;
+        document.getElementById("feature-counter").textContent = "00 / 00";
+        document.getElementById("feature-link").hidden = true;
+        nextButton.disabled = true;
+        document.getElementById("feature-meta").textContent = "";
+        return;
+      }
       document.getElementById("feature-counter").textContent = `${String(current + 1).padStart(2, "0")} / ${String(featured.length).padStart(2, "0")}`;
-      document.getElementById("feature-category").textContent = `${article.category.toUpperCase()} · CINCINNATI`;
-      heading.textContent = article.title;
-      document.getElementById("feature-deck").textContent = article.deck;
+      document.getElementById("feature-copy").innerHTML = `<p class="lead-overline">${escapeHTML(String(article.category || "UNCATEGORIZED").toUpperCase())} · CINCINNATI</p><h1 id="lead-heading">${escapeHTML(article.title || "Untitled story")}</h1><p class="lead-deck">${escapeHTML(article.deck || "")}</p>`;
       document.getElementById("feature-link").href = articleURL(article);
-      document.getElementById("feature-meta").textContent = `BY ${article.author.toUpperCase()} · ${article.minutes} MIN READ`;
-      nextButton.setAttribute("aria-label", `Next headline; currently showing ${article.title}`);
+      document.getElementById("feature-link").hidden = false;
+      document.getElementById("feature-meta").textContent = `BY ${String(article.author || "YODEL").toUpperCase()} · ${Number.isFinite(article.minutes) ? article.minutes : 1} MIN READ`;
     }
     nextButton.addEventListener("click", () => {
+      if (!featured.length) return;
       current = (current + 1) % featured.length;
       showFeature();
     });
     showFeature();
-    document.getElementById("latest-stories").innerHTML = articles.slice(1, 5).map(storyCard).join("");
+    document.getElementById("latest-stories").innerHTML = articles.length
+      ? articles.slice(1, 5).map(storyCard).join("")
+      : `<p class="empty-results">No stories are available in this edition.</p>`;
   }
 
   if (page === "archive") {
     const search = document.getElementById("story-search");
     const filter = document.getElementById("category-filter");
-    const requestedCategory = new URLSearchParams(window.location.search).get("category");
+    const params = new URLSearchParams(window.location.search);
+    const requestedCategory = params.get("category");
     if (requestedCategory && [...filter.options].some((option) => option.value === requestedCategory)) {
       filter.value = requestedCategory;
+    }
+    search.value = params.get("q") || "";
+    const clearButton = document.getElementById("clear-filters");
+    clearButton.addEventListener("click", () => {
+      search.value = "";
+      filter.value = "";
+      search.focus();
+      renderArchive();
+    });
+    function syncURL() {
+      if (window.location.protocol === "file:") return;
+      const url = new URL(window.location.href);
+      if (filter.value) url.searchParams.set("category", filter.value);
+      else url.searchParams.delete("category");
+      if (search.value.trim()) url.searchParams.set("q", search.value.trim());
+      else url.searchParams.delete("q");
+      window.history.replaceState(window.history.state, "", url);
     }
     function renderArchive() {
       const query = search.value.trim().toLocaleLowerCase();
       const matches = articles.filter((article) =>
         (!filter.value || article.category === filter.value) &&
-        (!query || [article.title, article.deck, article.category, ...article.paragraphs]
+        (!query || [article.title, article.deck, article.category, ...(Array.isArray(article.paragraphs) ? article.paragraphs : [])]
+          .filter((text) => typeof text === "string")
           .some((text) => text.toLocaleLowerCase().includes(query)))
       );
       document.getElementById("archive-stories").innerHTML = matches.map((article, index) =>
-        `<article class="archive-item"><span class="archive-item__number">${String(index + 1).padStart(2, "0")}</span><div><p class="story-category">${escapeHTML(article.category)} <span>· ${escapeHTML(formatDate(article.date))}</span></p><h3><a href="${articleURL(article)}">${escapeHTML(article.title)}</a></h3><p>${escapeHTML(article.deck)}</p></div><a class="archive-item__arrow" href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title)}">↗</a></article>`
+        `<article class="archive-item"><span class="archive-item__number">${String(index + 1).padStart(2, "0")}</span><div><p class="story-category">${escapeHTML(article.category || "Uncategorized")} <span>· ${escapeHTML(formatDate(article.date))}</span></p><h3><a href="${articleURL(article)}">${escapeHTML(article.title || "Untitled story")}</a></h3><p>${escapeHTML(article.deck || "")}</p></div><a class="archive-item__arrow" href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title || "Untitled story")}">↗</a></article>`
       ).join("");
       document.getElementById("result-count").textContent = `${matches.length} ${matches.length === 1 ? "story" : "stories"} found`;
+      document.getElementById("empty-detail").textContent = query
+        ? `No stories match “${search.value.trim()}”${filter.value ? ` in ${filter.value}` : ""}.`
+        : filter.value
+          ? `No stories match the ${filter.value} department.`
+          : "No stories are available in this edition.";
       document.getElementById("empty-results").hidden = matches.length !== 0;
+      syncURL();
     }
     search.addEventListener("input", renderArchive);
     filter.addEventListener("change", renderArchive);
@@ -81,17 +124,24 @@
     const article = articles.find((item) => item.id === id);
     if (!article) {
       document.title = "Story not found — Yodel";
+      document.querySelector('meta[name="description"]').content = "This story is unavailable. Browse Yodel's fictional dispatches.";
       container.innerHTML = `<div class="not-found"><span class="small-label">404 / LOST IN THE PRINT ROOM</span><h1>That story isn't in this edition.</h1><p>The link may be out of date, or the story may be entirely too fictional.</p><a class="button button--dark" href="archive.html">Browse all stories <span aria-hidden="true">↗</span></a></div>`;
     } else {
-      document.title = `${article.title} — Yodel`;
-      document.querySelector('meta[name="description"]').content = `${article.deck} Fictional satire from Yodel.`;
-      const related = articles.filter((item) => item.id !== article.id).slice(0, 2);
+      const title = article.title || "Untitled story";
+      const deck = article.deck || "This story's summary is unavailable.";
+      document.title = `${title} — Yodel`;
+      document.querySelector('meta[name="description"]').content = `${deck} Fictional satire from Yodel.`;
+      const related = [
+        ...articles.filter((item) => item.id !== article.id && item.category === article.category),
+        ...articles.filter((item) => item.id !== article.id && item.category !== article.category)
+      ].slice(0, 2);
+      const paragraphs = Array.isArray(article.paragraphs) ? article.paragraphs.filter((paragraph) => typeof paragraph === "string") : [];
       container.innerHTML = `<article class="article-layout">
-        <header class="article-header"><p class="story-category">${escapeHTML(article.category)} <span> / FICTIONAL DISPATCH</span></p><h1>${escapeHTML(article.title)}</h1><p class="article-deck">${escapeHTML(article.deck)}</p><div class="article-byline"><span>BY <strong>${escapeHTML(article.author.toUpperCase())}</strong></span><span>${escapeHTML(formatDate(article.date))}</span><span>${article.minutes} MIN READ</span></div></header>
-        <div class="article-body"><div class="article-column"><div class="article-location"><span>DATELINE</span> ${escapeHTML(article.location)}</div>
-          ${article.paragraphs.map((paragraph, index) => `<p${index === 0 ? ' class="first-paragraph"' : ""}>${escapeHTML(paragraph)}</p>${index === 1 ? `<blockquote><span aria-hidden="true">“</span>${escapeHTML(article.quote)}<span aria-hidden="true">”</span></blockquote>` : ""}`).join("")}
+        <header class="article-header"><p class="story-category">${escapeHTML(article.category || "Uncategorized")} <span> / FICTIONAL DISPATCH</span></p><h1>${escapeHTML(title)}</h1><p class="article-deck">${escapeHTML(deck)}</p><div class="article-byline"><span>BY <strong>${escapeHTML((article.author || "Yodel").toUpperCase())}</strong></span><span>${escapeHTML(formatDate(article.date))}</span><span>${Number.isFinite(article.minutes) ? article.minutes : 1} MIN READ</span></div></header>
+        <div class="article-body"><div class="article-column"><div class="article-location"><span>DATELINE</span> ${escapeHTML(article.location || "LOCATION UNAVAILABLE")}</div>
+          ${paragraphs.length ? paragraphs.map((paragraph, index) => `<p${index === 0 ? ' class="first-paragraph"' : ""}>${escapeHTML(paragraph)}</p>${index === 1 && article.quote ? `<blockquote><span aria-hidden="true">“</span>${escapeHTML(article.quote)}<span aria-hidden="true">”</span></blockquote>` : ""}`).join("") : `<p>The story text is unavailable.</p>`}
           <div class="article-endmark" aria-hidden="true">✳</div><p class="article-disclaimer"><strong>Editor's note:</strong> This is an invented satirical story, not a factual report. The events and quotes above did not happen.</p>
-        </div><aside class="article-aside"><div class="aside-stamp">Y<span>.</span></div><p class="small-label">FROM THE YODEL DESK</p><p>A real city. An imaginary story. Read with a grain of salt, preferably beside some crackers.</p><a href="archive.html?category=${encodeURIComponent(article.category)}">More in ${escapeHTML(article.category)} <span aria-hidden="true">↗</span></a></aside></div>
+        </div><aside class="article-aside"><div class="aside-stamp">Y<span>.</span></div><p class="small-label">FROM THE YODEL DESK</p><p>A real city. An imaginary story. Read with a grain of salt, preferably beside some crackers.</p><a href="archive.html?category=${encodeURIComponent(article.category || "")}">More in ${escapeHTML(article.category || "all departments")} <span aria-hidden="true">↗</span></a></aside></div>
       </article><section class="related-section" aria-labelledby="related-heading"><div class="section-heading"><div><span class="small-label">KEEP TURNING THE PAGE</span><h2 id="related-heading">Elsewhere in Yodel<span class="heading-period">.</span></h2></div><a class="underlined-link" href="archive.html">All stories <span aria-hidden="true">↗</span></a></div><div class="story-grid story-grid--two">${related.map(storyCard).join("")}</div></section>`;
     }
   }

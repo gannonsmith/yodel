@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4d969">
+  <meta name="date" content="">
   <meta name="description" content="Browse the entirely fictional dispatches of Yodel, a Cincinnati-flavored satire publication.">
   <title>All stories — Yodel</title>
   <link rel="stylesheet" href="styles.css">
@@ -15,7 +16,7 @@
   <div class="site-shell">
     <div class="satire-banner"><span class="satire-banner__mark">!</span><strong>THIS IS SATIRE.</strong> Every story here is fictional, including the ones that sound plausible. <a href="index.html#about">How we work <span aria-hidden="true">↗</span></a></div>
     <header class="site-header">
-      <div class="header-top"><span>THE QUEEN CITY'S MOST QUESTIONABLE PAPER</span><span class="edition-date">SEPTEMBER 2026</span><span>VOL. 01 · NO. 01</span></div>
+      <div class="header-top"><span>THE QUEEN CITY'S MOST QUESTIONABLE PAPER</span><span class="edition-date">LATEST EDITION</span><span>VOL. 01 · NO. 01</span></div>
       <div class="masthead"><a href="index.html" aria-label="Yodel home">YODEL<span class="masthead-dot">.</span></a><p>THE NEWS, GIVE OR TAKE.</p></div>
       <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Front page</a><a href="archive.html" aria-current="page">All stories</a><a href="archive.html?category=Transit">Transit</a><a href="archive.html?category=Food%20%26%20Drink">Food &amp; Drink</a><a href="index.html#about">About Yodel</a></nav>
     </header>
@@ -24,7 +25,7 @@
       <section aria-label="Find stories" class="archive-tools"><div class="search-field"><label for="story-search">SEARCH THE PAPER</label><input id="story-search" type="search" placeholder="Try streetcar, chili, river…" autocomplete="off"></div><div class="filter-field"><label for="category-filter">DEPARTMENT</label><select id="category-filter"><option value="">All departments</option><option value="Food &amp; Drink">Food &amp; Drink</option><option value="Transit">Transit</option><option value="Workplace">Workplace</option><option value="Civic Life">Civic Life</option></select></div></section>
       <div class="results-heading"><h2>Dispatches</h2><p id="result-count" role="status" aria-live="polite"></p></div>
       <div id="archive-stories" class="archive-list"></div>
-      <p id="empty-results" class="empty-results" hidden>No stories match that search. Try another word or department.</p>
+      <p id="empty-results" class="empty-results" hidden><span id="empty-detail">No stories match those filters.</span> Try another search or department, or <button id="clear-filters" type="button">clear filters</button>.</p>
       <noscript><p class="empty-results">Enable JavaScript to browse the local story archive.</p></noscript>
     </main>
     <footer class="site-footer"><div class="footer-main"><a class="footer-logo" href="index.html">YODEL<span>.</span></a><p>A little newsprint. A lot of imagination.<br>Made for Cincinnati, not mistaken for the news.</p><a href="index.html">Back to the front page <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><strong>FICTION &amp; SATIRE — NOT REAL NEWS.</strong><span>© 2026 YODEL · AN UNREAL PUBLICATION</span><a href="#main">Back to top ↑</a></div></footer>

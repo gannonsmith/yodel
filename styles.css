@@ -42,6 +42,7 @@ button { cursor: pointer; }
 .section-kicker { display: flex; justify-content: space-between; gap: 10px; padding: 16px 0; font-size: 10px; font-weight: 700; letter-spacing: .1em; border-bottom: 1px solid var(--rule); }
 .lead-section { display: grid; grid-template-columns: 1.1fr .9fr; min-height: 545px; border-bottom: 4px double var(--ink); }
 .lead-copy { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(28px, 4vw, 60px) clamp(25px, 4vw, 60px) 38px 0; }
+#feature-copy { width: 100%; }
 .eyebrow { display: flex; align-items: center; gap: 12px; width: 100%; font-size: 10px; font-weight: 700; letter-spacing: .13em; white-space: nowrap; }
 .eyebrow-rule { display: inline-block; width: 28px; height: 2px; background: var(--red); }
 .eyebrow #feature-counter { margin-left: auto; color: var(--muted); }
@@ -102,6 +103,8 @@ h2 { margin: 7px 0 0; font-size: clamp(35px, 4vw, 55px); line-height: 1.08; lett
 .archive-tools label { display: block; margin-bottom: 9px; font-size: 10px; font-weight: 800; letter-spacing: .13em; }
 .archive-tools input, .archive-tools select { display: block; width: 100%; height: 48px; padding: 0 13px; border: 1px solid var(--ink); border-radius: 0; background: var(--paper); color: var(--ink); font: 15px Arial, Helvetica, sans-serif; }
 .archive-tools input::placeholder { color: #736c58; }
+.archive-tools input:focus-visible, .archive-tools select:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; box-shadow: 0 0 0 5px var(--paper-light); }
+.empty-results button { padding: 2px 0; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
 .results-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin: 52px 0 14px; }
 .results-heading h2 { font: 800 13px Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .13em; }
 .results-heading p { font-size: 11px; font-weight: 700; letter-spacing: .08em; }
