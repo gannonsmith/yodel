@@ -1,6 +1,24 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "cincinnati-hills-escalators",
+    category: "Civic Life",
+    title: "Cincinnati Hills File Joint Request for Escalators, Cite \"Excessive Verticality\"",
+    deck: "Neighborhood inclines say they are tired of being treated like a personality test.",
+    author: "Yodel Desk",
+    date: "2026-09-30",
+    minutes: 3,
+    location: "CINCINNATI, FICTIONALLY",
+    quote: "We appreciate that people call us scenic, but scenic is not a substitute for accessibility.",
+    paragraphs: [
+      "Several Cincinnati hills have submitted a joint request for escalators, citing what they describe as an “unsustainable level of verticality” and a growing public expectation that arriving somewhere should not require a personal narrative.",
+      "The fictional petition, signed by hills across the city, asks for a pilot escalator connecting “the part people say is close” with “the part that is technically only three blocks away.” The proposal would include rest platforms, handrails, and a small display showing how much elevation a resident has emotionally overcome.",
+      "“We appreciate that people call us scenic,” said one representative of the entirely imaginary Cincinnati Incline Coalition. “But scenic is not a substitute for accessibility, and neither is telling someone they are almost there.”",
+      "City planners are reportedly studying several routes, including one that would move pedestrians uphill while allowing downhill travelers to descend on a slow, dignified conveyor belt. A separate proposal would install a button at the bottom labeled I HAVE RECONSIDERED MY PLANS.",
+      "The hills emphasized that they are not asking to be flattened. They would simply like to participate in the modern workplace by becoming a little less of a surprise. For now, residents should continue using the existing sidewalks, stairs, and motivational texts from friends."
+    ]
+  },
+  {
     id: "go-tower-chili",
     category: "Food & Drink",
     title: "Skyline Chili to Take Over GO Tower Cafeteria, Sources Confirm While Holding Crackers",
