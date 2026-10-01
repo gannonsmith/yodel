@@ -1,6 +1,26 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "kroger-fuel-points",
+    category: "Consumer Affairs",
+    title: "Local Kroger Shopper Earns Enough Fuel Points to Save 14 Cents on a $70 Grocery Bill",
+    deck: "After months of loyalty-program devotion, one customer celebrates a discount too small to affect the emotional damage of grocery shopping.",
+    author: "Yodel Desk",
+    date: "2026-10-01",
+    minutes: 3,
+    location: "CINCINNATI, FICTIONALLY",
+    quote: "I felt like the system finally saw me.",
+    paragraphs: [
+      "After months of carefully scanning loyalty cards, timing purchases, and purchasing products he did not particularly want, local shopper Brian Keller celebrated Tuesday after earning enough Kroger fuel points to reduce his $70 grocery bill by 14 cents.",
+      "“I felt like the system finally saw me,” Keller said, standing beside his receipt and a single discounted gallon of gasoline. “For a moment, all the digital coupons were worth it.”",
+      "Keller began collecting points in March after discovering that certain purchases could earn bonus rewards. Since then, he has bought six varieties of yogurt, three packages of snack crackers, and what he described as “an alarming amount of bottled water.”",
+      "The savings were applied automatically at a nearby fuel center, where Keller watched the price change from $3.119 per gallon to $3.109. “I actually took a picture,” he said. “It was the first time a grocery purchase had produced a measurable financial victory.”",
+      "Kroger representatives praised Keller’s dedication, noting that the fuel-points program allows shoppers to convert complex purchasing behavior into discounts that are “small, immediate, and emotionally significant.”",
+      "Keller said he plans to continue accumulating points, though he acknowledged that the program has already caused him to reorganize his weekly shopping around offers for items his household does not need. “I’m not saying I bought the family-size pretzels because of the points,” he said. “I’m saying the points made the pretzels feel inevitable.”",
+      "At press time, Keller was reportedly 86 points away from saving 10 cents per gallon, provided he spent at least $400 on qualifying purchases before the end of the month."
+    ]
+  },
+  {
     id: "cincinnati-hills-escalators",
     category: "Civic Life",
     title: "Cincinnati Hills File Joint Request for Escalators, Cite \"Excessive Verticality\"",
