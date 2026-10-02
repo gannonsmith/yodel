@@ -1,6 +1,27 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "locally-sourced-traffic-jam",
+    category: "Civic Life",
+    title: "Cincinnati Celebrates First Truly Locally Sourced Traffic Jam",
+    deck: "Officials say the backup contains only native potholes, construction barrels, and drivers merging onto Fort Washington Way at the last possible second.",
+    author: "Yodel Desk",
+    date: "2026-10-02",
+    minutes: 3,
+    location: "CINCINNATI, FICTIONALLY",
+    quote: "Nothing was imported. Not even the confusion.",
+    paragraphs: [
+      "City officials unveiled Cincinnati’s first truly locally sourced traffic jam Friday, proudly confirming that every component was produced within Hamilton County.",
+      "The backup includes several native potholes, twelve construction barrels, one lane closure of uncertain origin, and a driver who waited until the final possible moment to merge onto Fort Washington Way.",
+      "“This is a major sustainability milestone,” said fictional city transportation coordinator Marla Keene. “Nothing was imported. Not even the confusion.”",
+      "Organizers say the traffic jam began naturally near downtown before spreading through multiple interchanges and briefly affecting drivers who were nowhere near the original incident.",
+      "The project’s construction-barrel coordinator described the barrels as “locally sourced, seasonally arranged, and expected to remain in place indefinitely.”",
+      "Drivers praised the experience for its authenticity. “I knew immediately it was Cincinnati,” said one fictional commuter. “The pothole had character, the merge was aggressive, and everyone appeared to have received different instructions.”",
+      "Officials are now exploring an artisanal tollbooth concept and a farm-to-table roundabout near Norwood. A proposed bike lane was reportedly delayed after being trapped behind a delivery truck and three orange cones.",
+      "At press time, the traffic jam had expanded by approximately two miles, despite nobody being able to identify what caused it."
+    ]
+  },
+  {
     id: "kroger-fuel-points",
     category: "Consumer Affairs",
     title: "Local Kroger Shopper Earns Enough Fuel Points to Save 14 Cents on a $70 Grocery Bill",
