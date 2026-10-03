@@ -1,6 +1,28 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "fantasy-trade-negotiations",
+    category: "Sports",
+    title: "Fantasy Football Trade Negotiations Enter Third Week Without Anyone Naming an Actual Player",
+    deck: "Managers continue exchanging vague accusations, screenshots, and references to “value.”",
+    author: "Yodel Desk",
+    date: "2026-10-03",
+    minutes: 3,
+    location: "CINCINNATI, FICTIONALLY",
+    quote: "You know what you need to do.",
+    paragraphs: [
+      "Trade negotiations in a local fantasy football league entered their third consecutive week Monday, despite neither side having formally identified a player they would like to acquire.",
+      "The negotiations began when one manager sent a message reading, “You know what you need to do,” followed by a screenshot of their roster and a thumbs-up emoji.",
+      "“I thought we were close,” said fictional manager Tyler Morgan. “Then he sent me a ranking from a website I’ve never heard of and said I was clearly acting in bad faith.”",
+      "According to league records, the two managers have exchanged 47 messages, six screenshots, three reaction GIFs, and one poll asking whether a trade should be “fun” or “fair.” No offer has been submitted.",
+      "At one point, one manager reportedly typed the phrase “I’m not giving up my whole team” despite the other manager never asking for any players.",
+      "League officials say the dispute has now expanded beyond football. The managers have begun debating each other’s drafting philosophies, commitment to research, and general character.",
+      "“I offered to discuss running backs,” said one participant. “He brought up what happened in the 2022 draft.”",
+      "The league commissioner has urged both sides to either make a concrete proposal or move on. The request was met with a 12-minute voice memo titled JUST HEAR ME OUT.",
+      "At press time, negotiations remained active, with both managers reportedly waiting for the other to “show seriousness.”"
+    ]
+  },
+  {
     id: "locally-sourced-traffic-jam",
     category: "Civic Life",
     title: "Cincinnati Celebrates First Truly Locally Sourced Traffic Jam",
