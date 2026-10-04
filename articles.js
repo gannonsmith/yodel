@@ -1,6 +1,27 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "michigan-offense-missing",
+    category: "Sports",
+    title: "Michigan Offense Files Missing-Person Report for Its Second-Half Production",
+    deck: "Police say the offense was last seen leaving the field with a 14–7 lead and has not been heard from since.",
+    author: "Yodel Desk",
+    date: "2026-10-04",
+    minutes: 3,
+    location: "MINNEAPOLIS, FICTIONALLY",
+    quote: "We initially assumed it was just taking a brief tactical pause.",
+    paragraphs: [
+      "Michigan officials filed a missing-person report Sunday for the Wolverines’ second-half offense, which disappeared during Saturday’s 20–14 loss to Minnesota and has not been located.",
+      "The offense was last seen at halftime carrying a 14–7 lead, two interceptions, and what witnesses described as “reasonable momentum.” It failed to return for the second half.",
+      "“We initially assumed it was just taking a brief tactical pause,” said fictional Michigan investigator Dale Harkness. “But then the punts started.”",
+      "According to investigators, Michigan’s offense recorded only 47 seconds of possession in the third quarter and committed three second-half turnovers. Search teams later found six punts, two interceptions, and several abandoned third-down opportunities near the sideline.",
+      "Minnesota’s offense, meanwhile, remained active for most of the afternoon. The Golden Gophers controlled the ball for more than 37 minutes and scored 13 unanswered second-half points, eventually winning at home for the first time against Michigan since 1977.",
+      "Minnesota officials declined to comment on the investigation while celebrating the 100th meeting for the Little Brown Jug. Fans reportedly stormed the field and played “Mr. Brightside,” a song investigators believe may have been used to lure the Michigan offense out of hiding.",
+      "Michigan’s defense submitted a detailed witness statement, noting that it held Minnesota to two short field goals after turnovers and repeatedly returned the ball to an offense that appeared unwilling to accept it.",
+      "At press time, the missing offense was believed to be somewhere between the second-quarter goal line and the upcoming bye week. Anyone with information is asked to contact the Michigan football program or check the nearest quarterback controversy."
+    ]
+  },
+  {
     id: "fantasy-trade-negotiations",
     category: "Sports",
     title: "Fantasy Football Trade Negotiations Enter Third Week Without Anyone Naming an Actual Player",
