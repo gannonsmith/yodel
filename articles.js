@@ -1,6 +1,28 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "bengals-path-to-12-5",
+    category: "Sports",
+    title: "Bengals Fan Updates Spreadsheet to Track Every Possible Path From 2–2 to 12–5",
+    deck: "The document now includes six required wins, several opponent collapses, and one referee “having a thoughtful afternoon.”",
+    author: "Yodel Desk",
+    date: "2026-10-05",
+    minutes: 3,
+    location: "CINCINNATI, FICTIONALLY",
+    quote: "I wanted to be realistic.",
+    paragraphs: [
+      "Local Bengals fan Tyler Morgan has updated his 47-tab spreadsheet to account for Cincinnati’s current 2–2 record, revising the team’s projected path to 12–5 after Sunday’s loss to Jacksonville.",
+      "Morgan said the spreadsheet began as a simple attempt to understand the remaining schedule. It now includes color-coded playoff scenarios, injury contingencies, strength-of-schedule projections, and a tab labeled “Things That Would Have to Go Our Way.”",
+      "“I wanted to be realistic,” Morgan said. “So I included a conservative scenario where we win six straight and several other teams experience administrative difficulties.”",
+      "The spreadsheet currently requires the Bengals to win nearly every remaining game, receive unexpected assistance from multiple AFC opponents, and benefit from what Morgan described as “one officiating crew having a thoughtful afternoon.”",
+      "A second tab models the team’s chances if Cincinnati wins next week. A third explores the emotional consequences of falling to 2–3 while remaining technically alive. A fourth is dedicated entirely to identifying which losses can later be described as “good losses.”",
+      "Morgan said he is not getting ahead of himself.",
+      "“I haven’t even opened the Super Bowl tab,” he said, before quickly minimizing a worksheet titled “New Orleans Hotel Options.”",
+      "Friends have encouraged Morgan to spend less time on the spreadsheet and more time enjoying football. Morgan said he appreciates their concern but noted that none of them have seen the scenario in which Cincinnati wins the division because four other teams lose on the same Sunday.",
+      "At press time, the spreadsheet had generated 183 possible seasons, 179 of which ended with Morgan saying, “Well, if we had just beaten them that one time.”"
+    ]
+  },
+  {
     id: "michigan-offense-missing",
     category: "Sports",
     title: "Michigan Offense Files Missing-Person Report for Its Second-Half Production",
