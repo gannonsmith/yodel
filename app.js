@@ -15,7 +15,7 @@
     Workplace: "workplace",
     "Civic Life": "civic"
   })[category] || "general";
-  const supportedVisualMotifs = new Set(["terminal", "scorecard", "stadium", "trade", "traffic", "ledger", "hill", "chili", "streetcar", "coffee", "barrel", "river"]);
+  const supportedVisualMotifs = new Set(["terminal", "football", "traffic", "ledger", "hill", "chili", "streetcar", "coffee", "barrel", "river"]);
   const visualMark = (article) => {
     const motif = typeof article.visualMotif === "string" && supportedVisualMotifs.has(article.visualMotif)
       ? article.visualMotif

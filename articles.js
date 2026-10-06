@@ -21,7 +21,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "bengals-path-to-12-5",
     category: "Sports",
-    visualMotif: "scorecard",
+    visualMotif: "football",
     title: "Bengals Fan Updates Spreadsheet to Track Every Possible Path From 2–2 to 12–5",
     deck: "The document now includes six required wins, several opponent collapses, and one referee “having a thoughtful afternoon.”",
     author: "Yodel Desk",
@@ -44,7 +44,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "michigan-offense-missing",
     category: "Sports",
-    visualMotif: "stadium",
+    visualMotif: "football",
     title: "Michigan Offense Files Missing-Person Report for Its Second-Half Production",
     deck: "Police say the offense was last seen leaving the field with a 14–7 lead and has not been heard from since.",
     author: "Yodel Desk",
@@ -66,7 +66,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "fantasy-trade-negotiations",
     category: "Sports",
-    visualMotif: "trade",
+    visualMotif: "football",
     title: "The Trade Is About Two Players. The Argument Is About Who Can Count.",
     deck: "One proposed swap of running backs becomes a referendum on fairness, intelligence, and the proper use of the word “upside.”",
     author: "Yodel Desk",

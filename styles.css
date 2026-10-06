@@ -26,7 +26,9 @@ button { cursor: pointer; }
 .header-top, .main-nav, .section-kicker, .small-label, .eyebrow, .lead-overline, .lead-meta, .art-topline, .art-bottomline, .story-category, .story-card__top, .story-card__foot, .department-links, .footer-bottom, .article-byline, .article-location, .back-link, .archive-tools label, .results-heading, .archive-item__number, .loading-note {
   font-family: Arial, Helvetica, sans-serif;
 }
-.header-top { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0 12px; border-bottom: 1px solid var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.header-top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding: 16px 0 12px; border-bottom: 1px solid var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.header-top span:nth-child(2) { text-align: center; }
+.header-top span:last-child { text-align: right; }
 .masthead { text-align: center; padding: 14px 0 20px; }
 .masthead a { display: inline-block; text-decoration: none; font: 900 clamp(84px, 13.2vw, 194px)/.87 Georgia, "Times New Roman", serif; letter-spacing: -.097em; padding-right: .09em; }
 .masthead a:hover { color: var(--ink); }
@@ -155,8 +157,9 @@ blockquote span { color: var(--red); }
   .story-card:nth-last-child(-n+2) { border-bottom: 0; }
 }
 @media (max-width: 700px) {
-  .header-top { font-size: 9px; }
+  .header-top { grid-template-columns: 1fr auto; font-size: 9px; }
   .header-top span:first-child { display: none; }
+  .header-top span:nth-child(2) { text-align: left; }
   .masthead { padding: 24px 0 17px; }
   .masthead a { font-size: clamp(75px, 18vw, 125px); }
   .masthead p { font-size: 9px; letter-spacing: .27em; }
@@ -230,11 +233,8 @@ main { position: relative; }
 .department-mark--general::before { width: 5px; height: 5px; left: 1px; top: 1px; box-shadow: 8px 0 0 currentColor, 4px 4px 0 currentColor, 0 8px 0 currentColor, 8px 8px 0 currentColor; }
 .department-mark--terminal::before { width: 14px; height: 10px; left: 1px; top: 2px; box-shadow: inset 0 0 0 2px currentColor; }
 .department-mark--terminal::after { width: 8px; height: 2px; left: 4px; top: 14px; }
-.department-mark--scorecard::before { width: 13px; height: 14px; left: 1px; top: 1px; box-shadow: inset 0 0 0 2px currentColor; }
-.department-mark--scorecard::after { width: 7px; height: 2px; left: 4px; top: 5px; box-shadow: 0 4px 0 currentColor; }
-.department-mark--stadium::before { width: 13px; height: 3px; left: 1px; top: 6px; box-shadow: 3px 3px 0 currentColor, 6px 3px 0 currentColor, 9px 3px 0 currentColor, 0 7px 0 currentColor; }
-.department-mark--trade::before { width: 12px; height: 3px; left: 1px; top: 3px; box-shadow: 2px 8px 0 currentColor; }
-.department-mark--trade::after { width: 4px; height: 4px; left: 10px; top: 1px; box-shadow: -10px 8px 0 currentColor; }
+.department-mark--football::before { width: 14px; height: 9px; left: 1px; top: 3px; border-radius: 48% 52% 48% 52%; transform: rotate(-32deg); box-shadow: inset 0 0 0 2px currentColor; }
+.department-mark--football::after { width: 2px; height: 7px; left: 7px; top: 5px; transform: rotate(-32deg); box-shadow: -2px 2px 0 -1px currentColor, 2px -2px 0 -1px currentColor; }
 .department-mark--traffic::before, .department-mark--barrel::before { width: 10px; height: 4px; left: 3px; top: 1px; box-shadow: 0 5px 0 currentColor, 0 10px 0 currentColor; }
 .department-mark--traffic::after, .department-mark--barrel::after { width: 12px; height: 2px; left: 2px; top: 14px; }
 .department-mark--ledger::before { width: 12px; height: 14px; left: 2px; top: 1px; box-shadow: inset 0 0 0 2px currentColor; }
@@ -261,8 +261,6 @@ main { position: relative; }
 .margin-stamp::after { inset: 9px; border-style: dotted; }
 .margin-stamp span { font-size: 8px; }
 .margin-stamp b { margin-top: 3px; font-size: 13px; }
-.margin-stamp--home { right: 1.5%; top: 36px; }
-.margin-stamp--home span { font: 900 27px/.7 Georgia, serif; }
 .margin-stamp--archive { right: 1.5%; top: 22px; transform: rotate(7deg); }
 .margin-stamp--article { right: 1.5%; top: 0; transform: rotate(7deg); }
 
