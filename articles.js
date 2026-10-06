@@ -3,24 +3,18 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "ohio-data-centers-electricity",
     category: "Technology",
-    title: "Ohio Data Centers Reassure Residents They’ll Only Need Most of the Electricity",
-    deck: "Developers say concerns about power bills, water use, and grid capacity are “mostly a matter of perspective.”",
+    title: "Your Utility Bill Welcomes You as a Partner in Upgrades You Didn’t Request",
+    deck: "The infrastructure may be necessary. The partnership language arrives before anyone asks whether you benefit.",
     author: "Yodel Desk",
     date: "2026-10-06",
     minutes: 4,
-    location: "COLUMBUS, FICTIONALLY",
-    quote: "People hear that a hyperscale facility can use as much electricity as 100,000 homes and become alarmed.",
+    location: "OHIO, SERVICE AREA",
+    quote: "Your contribution is welcome, whether or not you asked for a seat at the table.",
     paragraphs: [
-      "Ohio data-center developers attempted to reassure residents Tuesday that the state’s rapidly expanding artificial-intelligence infrastructure would require only “most” of the electricity, water, land, and public patience currently available.",
-      "“People hear that a hyperscale facility can use as much electricity as 100,000 homes and become alarmed,” said fictional industry spokesperson Grant Pemberton. “But when you compare that to the number of homes in Ohio, it’s actually a very comforting percentage.”",
-      "The reassurance follows months of debate over data centers, which supporters describe as engines of investment and technological progress. Critics have raised questions about electricity prices, transmission upgrades, water use, farmland, tax incentives, and whether residents should help pay for infrastructure primarily needed by billion-dollar technology companies.",
-      "Pemberton said the industry was listening carefully to those concerns and had prepared a helpful chart showing how much power would remain after the next wave of facilities came online.",
-      "The chart consisted mostly of a red area.",
-      "“We want Ohioans to know that their lights will remain on in all but the most exceptional circumstances,” Pemberton said. “And even then, there should be enough ambient glow from the data centers to read by.”",
-      "Developers also addressed concerns about water consumption, explaining that the facilities would use water primarily for cooling computers that are being used to generate increasingly confident answers about how to conserve water.",
-      "When asked who would pay for new transmission lines and other grid upgrades, Pemberton said the industry supported a collaborative approach involving utilities, regulators, local governments, ratepayers, and “anyone who happens to be standing nearby when the invoice arrives.”",
-      "State officials emphasized that data centers could bring investment and jobs, while consumer advocates argued that extraordinary new electricity demand should not shift costs onto ordinary households. Several lawmakers have proposed requiring large data-center customers to cover the costs they create.",
-      "At press time, Ohio residents were being encouraged to view the data-center boom as an exciting opportunity, provided they did not look too closely at their electric bills or ask where the cooling water had gone."
+      "The Ohio Consumers’ Counsel has pursued protections intended to make data centers pay for the utility and power upgrades required to serve them. The question is straightforward: should customers who create new needs cover the cost?",
+      "In July 2025, the Public Utilities Commission of Ohio adopted a settlement on an AEP Ohio data-center tariff. A tariff sets terms for service; it does not settle every question about who pays for grid upgrades.",
+      "The debate remains about grid costs, ratepayer protections, tax incentives, and economic-development benefits. The investment may bring benefits; the question is how those benefits and costs are distributed.",
+      "No particular bill increase is attributed here to any particular data center. But “shared investment” has a welcoming sound for an arrangement in which customers may help pay for infrastructure they did not request and may not benefit from. Your contribution is welcome, whether or not you asked for a seat at the table."
     ]
   },
   {
