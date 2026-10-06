@@ -16,6 +16,7 @@ Open `index.html` in a browser, or serve this directory with any static file ser
 
 - `id`: unique, stable URL identifier used by `article.html?id=...`.
 - `category`, `title`, `deck`, `author`: the department, headline, short summary, and fictional byline.
+- `visualMotif`: a compact, story-specific pixel/print marker used in cards and article metadata. Choose a supported motif that comes from the article’s actual material rather than a generic category label.
 - `date`: the story's publication date in `YYYY-MM-DD` format. Article dates are the source of truth; the edition date shown in the header and the page-level `date` metadata are derived from the newest valid story date, never the visitor's clock.
 - `minutes`, `location`, `quote`: estimated reading time, imaginary dateline, and optional pull quote.
 - `paragraphs`: an array of plain-text story paragraphs.

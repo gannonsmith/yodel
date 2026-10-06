@@ -199,3 +199,73 @@ blockquote span { color: var(--red); }
   .button { transition: none; }
   .button--dark:hover { transform: none; }
 }
+
+/* Printed texture and department wayfinding */
+main { position: relative; }
+.lead-art, .archive-tools, .article-aside {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Ccircle cx='2' cy='2' r='.8' fill='%2324231d' fill-opacity='.16'/%3E%3Ccircle cx='11' cy='11' r='.55' fill='%23b73d2d' fill-opacity='.15'/%3E%3C/svg%3E");
+}
+.lead-art { background-color: var(--yellow); box-shadow: 4px 5px 0 #24231d22, inset 0 0 0 5px var(--paper), inset 0 0 0 6px var(--ink); }
+.archive-tools { background-color: var(--paper-light); box-shadow: 4px 4px 0 #24231d18; }
+.article-aside { background-color: var(--yellow); box-shadow: 5px 5px 0 #24231d24; }
+
+.department-mark {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  color: var(--red);
+  vertical-align: -.18em;
+}
+.department-mark::before, .department-mark::after { content: ""; position: absolute; display: block; background: currentColor; }
+.department-mark--food::before { width: 5px; height: 5px; left: 1px; top: 1px; box-shadow: 6px 0 0 currentColor, 0 6px 0 currentColor, 6px 6px 0 currentColor, 3px 10px 0 currentColor; }
+.department-mark--food::after { width: 3px; height: 3px; left: 7px; top: 13px; }
+.department-mark--transit::before { width: 4px; height: 12px; left: 2px; top: 2px; box-shadow: 7px 0 0 currentColor; }
+.department-mark--transit::after { width: 11px; height: 4px; left: 2px; top: 6px; background: var(--yellow); box-shadow: 0 0 0 1px currentColor; }
+.department-mark--workplace::before { width: 4px; height: 4px; left: 1px; top: 1px; box-shadow: 5px 0 0 currentColor, 10px 0 0 currentColor, 0 5px 0 currentColor, 5px 5px 0 currentColor, 10px 5px 0 currentColor, 0 10px 0 currentColor, 5px 10px 0 currentColor, 10px 10px 0 currentColor; }
+.department-mark--workplace::after { width: 3px; height: 3px; left: 6px; top: 6px; background: var(--paper); }
+.department-mark--civic::before { width: 13px; height: 4px; left: 1px; top: 2px; box-shadow: 3px 4px 0 currentColor, 6px 4px 0 currentColor, 9px 4px 0 currentColor, 0 9px 0 currentColor; }
+.department-mark--civic::after { width: 13px; height: 3px; left: 1px; top: 13px; }
+.department-mark--general::before { width: 5px; height: 5px; left: 1px; top: 1px; box-shadow: 8px 0 0 currentColor, 4px 4px 0 currentColor, 0 8px 0 currentColor, 8px 8px 0 currentColor; }
+.department-mark--terminal::before { width: 14px; height: 10px; left: 1px; top: 2px; box-shadow: inset 0 0 0 2px currentColor; }
+.department-mark--terminal::after { width: 8px; height: 2px; left: 4px; top: 14px; }
+.department-mark--scorecard::before { width: 13px; height: 14px; left: 1px; top: 1px; box-shadow: inset 0 0 0 2px currentColor; }
+.department-mark--scorecard::after { width: 7px; height: 2px; left: 4px; top: 5px; box-shadow: 0 4px 0 currentColor; }
+.department-mark--stadium::before { width: 13px; height: 3px; left: 1px; top: 6px; box-shadow: 3px 3px 0 currentColor, 6px 3px 0 currentColor, 9px 3px 0 currentColor, 0 7px 0 currentColor; }
+.department-mark--trade::before { width: 12px; height: 3px; left: 1px; top: 3px; box-shadow: 2px 8px 0 currentColor; }
+.department-mark--trade::after { width: 4px; height: 4px; left: 10px; top: 1px; box-shadow: -10px 8px 0 currentColor; }
+.department-mark--traffic::before, .department-mark--barrel::before { width: 10px; height: 4px; left: 3px; top: 1px; box-shadow: 0 5px 0 currentColor, 0 10px 0 currentColor; }
+.department-mark--traffic::after, .department-mark--barrel::after { width: 12px; height: 2px; left: 2px; top: 14px; }
+.department-mark--ledger::before { width: 12px; height: 14px; left: 2px; top: 1px; box-shadow: inset 0 0 0 2px currentColor; }
+.department-mark--ledger::after { width: 6px; height: 2px; left: 5px; top: 5px; box-shadow: 0 4px 0 currentColor; }
+.department-mark--hill::before { width: 14px; height: 3px; left: 1px; top: 10px; transform: rotate(-25deg); transform-origin: left center; }
+.department-mark--hill::after { width: 5px; height: 5px; left: 9px; top: 2px; }
+.department-mark--chili::before { width: 12px; height: 6px; left: 2px; top: 7px; border-radius: 0 0 7px 7px; }
+.department-mark--chili::after { width: 8px; height: 2px; left: 4px; top: 3px; box-shadow: 2px -2px 0 currentColor; }
+.department-mark--streetcar::before { width: 13px; height: 10px; left: 1px; top: 3px; box-shadow: inset 0 0 0 2px currentColor; }
+.department-mark--streetcar::after { width: 3px; height: 3px; left: 3px; top: 12px; box-shadow: 7px 0 0 currentColor; }
+.department-mark--coffee::before { width: 10px; height: 10px; left: 2px; top: 4px; }
+.department-mark--coffee::after { width: 5px; height: 6px; left: 11px; top: 6px; box-shadow: inset 0 0 0 2px var(--red); }
+.department-mark--river::before { width: 13px; height: 3px; left: 1px; top: 5px; box-shadow: 3px 5px 0 currentColor; transform: skewX(-30deg); }
+
+.story-category .department-mark { margin-right: 8px; }
+.story-card { position: relative; }
+.story-card::after { content: ""; width: 18px; height: 3px; margin-top: 12px; background: var(--red); box-shadow: 5px 5px 0 #b73d2d66; }
+.archive-item { position: relative; }
+.archive-item::before { content: ""; position: absolute; left: 0; top: 0; width: 32px; border-top: 3px solid var(--red); }
+.article-header .story-category .department-mark { transform: scale(1.15); margin-right: 10px; }
+
+.margin-stamp { position: absolute; z-index: 1; display: grid; place-content: center; width: 68px; height: 68px; border: 2px solid var(--red); color: var(--red); font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: .08em; line-height: 1; text-align: center; opacity: .72; pointer-events: none; transform: rotate(-8deg); box-shadow: 3px 3px 0 #b73d2d33; }
+.margin-stamp::before, .margin-stamp::after { content: ""; position: absolute; inset: 4px; border: 1px solid currentColor; }
+.margin-stamp::after { inset: 9px; border-style: dotted; }
+.margin-stamp span { font-size: 8px; }
+.margin-stamp b { margin-top: 3px; font-size: 13px; }
+.margin-stamp--home { right: 1.5%; top: 36px; }
+.margin-stamp--home span { font: 900 27px/.7 Georgia, serif; }
+.margin-stamp--archive { right: 1.5%; top: 22px; transform: rotate(7deg); }
+.margin-stamp--article { right: 1.5%; top: 0; transform: rotate(7deg); }
+
+.department-links a { grid-template-columns: 38px 20px 1fr auto; }
+.department-links a .department-mark { color: var(--red); }
+@media (max-width: 700px) { .margin-stamp { display: none; } }

@@ -3,6 +3,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "ohio-data-centers-electricity",
     category: "Technology",
+    visualMotif: "terminal",
     title: "Your Utility Bill Welcomes You as a Partner in Upgrades You Didn’t Request",
     deck: "The infrastructure may be necessary. The partnership language arrives before anyone asks whether you benefit.",
     author: "Yodel Desk",
@@ -20,6 +21,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "bengals-path-to-12-5",
     category: "Sports",
+    visualMotif: "scorecard",
     title: "Bengals Fan Updates Spreadsheet to Track Every Possible Path From 2–2 to 12–5",
     deck: "The document now includes six required wins, several opponent collapses, and one referee “having a thoughtful afternoon.”",
     author: "Yodel Desk",
@@ -42,6 +44,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "michigan-offense-missing",
     category: "Sports",
+    visualMotif: "stadium",
     title: "Michigan Offense Files Missing-Person Report for Its Second-Half Production",
     deck: "Police say the offense was last seen leaving the field with a 14–7 lead and has not been heard from since.",
     author: "Yodel Desk",
@@ -63,6 +66,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "fantasy-trade-negotiations",
     category: "Sports",
+    visualMotif: "trade",
     title: "The Trade Is About Two Players. The Argument Is About Who Can Count.",
     deck: "One proposed swap of running backs becomes a referendum on fairness, intelligence, and the proper use of the word “upside.”",
     author: "Yodel Desk",
@@ -81,6 +85,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "locally-sourced-traffic-jam",
     category: "Civic Life",
+    visualMotif: "traffic",
     title: "Cincinnati Celebrates First Truly Locally Sourced Traffic Jam",
     deck: "Officials say the backup contains only native potholes, construction barrels, and drivers merging onto Fort Washington Way at the last possible second.",
     author: "Yodel Desk",
@@ -102,6 +107,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "kroger-fuel-points",
     category: "Consumer Affairs",
+    visualMotif: "ledger",
     title: "Rewards Statement: You Made It Work",
     deck: "The fuel discount was small. Getting it took a week of decisions.",
     author: "Yodel Desk",
@@ -120,6 +126,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "cincinnati-hills-escalators",
     category: "Civic Life",
+    visualMotif: "hill",
     title: "Walking Directions for a Destination That’s “Three Blocks Away”",
     deck: "An honest neighborhood guide to distance, elevation, and the optimism of the person who called it walkable.",
     author: "Yodel Desk",
@@ -138,6 +145,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "go-tower-chili",
     category: "Food & Drink",
+    visualMotif: "chili",
     title: "Skyline Chili to Take Over GO Tower Cafeteria, Sources Confirm While Holding Crackers",
     deck: "A very local solution to the age-old question: what if lunch was also a civic identity?",
     author: "Ellis Vale",
@@ -155,6 +163,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "streetcar-two-way",
     category: "Transit",
+    visualMotif: "streetcar",
     title: "Cincinnati Streetcar Announces Ambitious Plan to Travel in Both Directions",
     deck: "The proposed innovation would allow riders to arrive somewhere and, under carefully controlled conditions, come back.",
     author: "Nora Bell",
@@ -172,6 +181,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "intern-proof-coffee",
     category: "Workplace",
+    visualMotif: "coffee",
     title: "Local Office Unveils Intern-Proof Starbucks Machines With Just One Button",
     deck: "The button is labeled “coffee.” An orientation session is still being considered.",
     author: "Milo Reed",
@@ -189,6 +199,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "orange-barrel-civic-duty",
     category: "Civic Life",
+    visualMotif: "barrel",
     title: "Orange Barrel Completes Fifth Year of Uninterrupted Civic Service",
     deck: "A quiet ceremony honors a fixture that has outlasted three detours and one very determined patch of grass.",
     author: "Iris Wynn",
@@ -206,6 +217,7 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "ohio-river-personal-day",
     category: "Civic Life",
+    visualMotif: "river",
     title: "Ohio River Requests One Personal Day, Promises to Be Back by Tuesday",
     deck: "Regional planners are reviewing the request and a very large out-of-office message.",
     author: "Ada Moss",

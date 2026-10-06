@@ -9,6 +9,19 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[character]);
   const articleURL = (article) => `article.html?id=${encodeURIComponent(article.id)}`;
+  const departmentClass = (category) => ({
+    "Food & Drink": "food",
+    Transit: "transit",
+    Workplace: "workplace",
+    "Civic Life": "civic"
+  })[category] || "general";
+  const supportedVisualMotifs = new Set(["terminal", "scorecard", "stadium", "trade", "traffic", "ledger", "hill", "chili", "streetcar", "coffee", "barrel", "river"]);
+  const visualMark = (article) => {
+    const motif = typeof article.visualMotif === "string" && supportedVisualMotifs.has(article.visualMotif)
+      ? article.visualMotif
+      : departmentClass(article.category);
+    return `<i class="department-mark department-mark--${motif}" aria-hidden="true"></i>`;
+  };
   const isISODate = (date) => {
     if (typeof date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
     const parsed = new Date(`${date}T12:00:00Z`);
@@ -30,7 +43,7 @@
   function storyCard(article, index) {
     return `<article class="story-card">
       <div class="story-card__top"><span>${String(index + 1).padStart(2, "0")} / THE DISPATCH</span><span aria-hidden="true">✳</span></div>
-      <p class="story-category">${escapeHTML(article.category || "Uncategorized")}</p>
+      <p class="story-category">${visualMark(article)}${escapeHTML(article.category || "Uncategorized")}</p>
       <h3><a href="${articleURL(article)}">${escapeHTML(article.title || "Untitled story")}</a></h3>
       <p class="story-deck">${escapeHTML(article.deck || "")}</p>
       <div class="story-card__foot"><span>${escapeHTML(formatDate(article.date))}</span><a href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title || "Untitled story")}">READ <span aria-hidden="true">↗</span></a></div>
@@ -102,7 +115,7 @@
           .some((text) => text.toLocaleLowerCase().includes(query)))
       );
       document.getElementById("archive-stories").innerHTML = matches.map((article, index) =>
-        `<article class="archive-item"><span class="archive-item__number">${String(index + 1).padStart(2, "0")}</span><div><p class="story-category">${escapeHTML(article.category || "Uncategorized")} <span>· ${escapeHTML(formatDate(article.date))}</span></p><h3><a href="${articleURL(article)}">${escapeHTML(article.title || "Untitled story")}</a></h3><p>${escapeHTML(article.deck || "")}</p></div><a class="archive-item__arrow" href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title || "Untitled story")}">↗</a></article>`
+        `<article class="archive-item"><span class="archive-item__number">${String(index + 1).padStart(2, "0")}</span><div><p class="story-category">${visualMark(article)}${escapeHTML(article.category || "Uncategorized")} <span>· ${escapeHTML(formatDate(article.date))}</span></p><h3><a href="${articleURL(article)}">${escapeHTML(article.title || "Untitled story")}</a></h3><p>${escapeHTML(article.deck || "")}</p></div><a class="archive-item__arrow" href="${articleURL(article)}" aria-label="Read ${escapeHTML(article.title || "Untitled story")}">↗</a></article>`
       ).join("");
       document.getElementById("result-count").textContent = `${matches.length} ${matches.length === 1 ? "story" : "stories"} found`;
       document.getElementById("empty-detail").textContent = query
@@ -137,7 +150,7 @@
       ].slice(0, 2);
       const paragraphs = Array.isArray(article.paragraphs) ? article.paragraphs.filter((paragraph) => typeof paragraph === "string") : [];
       container.innerHTML = `<article class="article-layout">
-        <header class="article-header"><p class="story-category">${escapeHTML(article.category || "Uncategorized")} <span> / YODEL DISPATCH</span></p><h1>${escapeHTML(title)}</h1><p class="article-deck">${escapeHTML(deck)}</p><div class="article-byline"><span>BY <strong>${escapeHTML((article.author || "Yodel").toUpperCase())}</strong></span><span>${escapeHTML(formatDate(article.date))}</span><span>${Number.isFinite(article.minutes) ? article.minutes : 1} MIN READ</span><span class="article-credit">AI-GENERATED · HUMAN APPROVED</span></div></header>
+        <header class="article-header"><p class="story-category">${visualMark(article)}${escapeHTML(article.category || "Uncategorized")} <span> / YODEL DISPATCH</span></p><h1>${escapeHTML(title)}</h1><p class="article-deck">${escapeHTML(deck)}</p><div class="article-byline"><span>BY <strong>${escapeHTML((article.author || "Yodel").toUpperCase())}</strong></span><span>${escapeHTML(formatDate(article.date))}</span><span>${Number.isFinite(article.minutes) ? article.minutes : 1} MIN READ</span><span class="article-credit">AI-GENERATED · HUMAN APPROVED</span></div></header>
         <div class="article-body"><div class="article-column"><div class="article-location"><span>DATELINE</span> ${escapeHTML(article.location || "LOCATION UNAVAILABLE")}</div>
           ${paragraphs.length ? paragraphs.map((paragraph, index) => `<p${index === 0 ? ' class="first-paragraph"' : ""}>${escapeHTML(paragraph).replace(/\n/g, "<br>")}</p>${index === 1 && article.quote ? `<blockquote><span aria-hidden="true">“</span>${escapeHTML(article.quote)}<span aria-hidden="true">”</span></blockquote>` : ""}`).join("") : `<p>The story text is unavailable.</p>`}
           <div class="article-endmark" aria-hidden="true">✳</div>

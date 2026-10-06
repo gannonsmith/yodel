@@ -85,13 +85,15 @@ Format should serve the joke, not become the joke by repetition.
 
 ## Visuals
 
-Images are optional editorial illustrations, not mandatory decoration. Use one only when it adds a second angle, a memorable visual idea, or a useful tonal counterpoint to the article.
+Every article receives one compact visual motif from Yodel’s native pixel/print system. Select it from the story’s actual material—such as a transit token, coffee cup, clipboard, data terminal, traffic cone, ledger, stadium light, or document stamp—rather than treating it as a generic category badge. Keep it simple, monochrome, and legible at small sizes; it is a visual shorthand, not a second joke or a claim of fact.
+
+Larger images are optional editorial illustrations, not mandatory decoration. Use one only when it adds a second angle, a memorable visual idea, or a useful tonal counterpoint to the article.
 
 Favor a consistent Yodel treatment: restrained editorial illustration or collage with a newspaper-like sensibility. Do not use generic stock-photo imitation, photorealistic depictions that could be mistaken for reporting, real people, or prominent trademarks unless their use is central, accurate, and safe.
 
 An image must clarify or deepen the premise rather than repeat the headline. Give it a concise descriptive alt text and, where useful, a caption that adds information or a separate joke.
 
-Never publish an image without the editor reviewing the exact generated asset.
+Never publish a larger generated image without the editor reviewing the exact asset.
 
 ## Datelines, bylines, and labels
 
