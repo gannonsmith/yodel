@@ -1,6 +1,6 @@
 # Yodel
 
-Yodel is a front-end prototype of a Cincinnati-flavored satirical newspaper. It borrows the visual language of a printed paper—yellow newsprint, strong headlines, rules, and compact departments—while making its fictional nature explicit on every page. Stories are invented, not news reports; the prototype uses AI-assisted satire as its editorial concept, not as a live generation service.
+Yodel is a front-end prototype of a location-agnostic satirical newspaper with occasional Cincinnati details. It borrows the visual language of a printed paper—yellow newsprint, strong headlines, rules, and compact departments—while making its fictional nature clear through its voice and publication-wide footer note. Stories are invented, not news reports; the prototype uses AI-assisted satire as its editorial concept, not as a live generation service.
 
 ## Run locally
 
@@ -24,6 +24,6 @@ Open `index.html` in a browser, or serve this directory with any static file ser
 
 ## Editorial approach
 
-All stories, quotes, and events are fictional. Before adding a story, check that its premise is clearly satirical, does not assert damaging facts about real people, and can be read without mistaking it for reporting. Preserve the site-wide fiction banner and the article-level editor's note. See [EDITORIAL_WORKFLOW.md](EDITORIAL_WORKFLOW.md) for a proposed human approval process if Yodel later generates drafts automatically.
+All stories, quotes, and events are fictional. Before adding a story, check that its premise is clearly satirical, does not assert damaging facts about real people, and can be read without mistaking it for reporting. Preserve the publication-wide footer note and the article-level “AI-generated, human approved” credit. See [EDITORIAL_WORKFLOW.md](EDITORIAL_WORKFLOW.md) for a proposed human approval process if Yodel later generates drafts automatically.
 
 **Deployment is intentionally not configured yet.** This repository has no hosting, DNS, CI, GitHub Actions, API, authentication, or secrets setup.

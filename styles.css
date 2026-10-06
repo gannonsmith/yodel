@@ -22,10 +22,6 @@ button { cursor: pointer; }
 .site-shell { max-width: 1480px; margin: 0 auto; min-height: 100vh; background: var(--paper); box-shadow: 0 0 50px #665a3455; }
 .skip-link { position: fixed; top: -80px; left: 20px; z-index: 20; background: var(--ink); color: white; padding: 12px 18px; }
 .skip-link:focus { top: 12px; }
-.satire-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 5px 8px; min-height: 42px; padding: 8px 20px; background: var(--ink); color: #fff4c7; text-align: center; font: 11px/1.4 Arial, Helvetica, sans-serif; letter-spacing: .055em; }
-.satire-banner__mark { display: inline-grid; place-items: center; width: 17px; height: 17px; border: 1px solid currentColor; border-radius: 50%; font-weight: bold; }
-.satire-banner a { color: inherit; text-underline-offset: 3px; margin-left: 8px; }
-.satire-banner a:hover { color: #f4d969; }
 .site-header, main, .site-footer { padding-left: clamp(22px, 5vw, 78px); padding-right: clamp(22px, 5vw, 78px); }
 .header-top, .main-nav, .section-kicker, .small-label, .eyebrow, .lead-overline, .lead-meta, .art-topline, .art-bottomline, .story-category, .story-card__top, .story-card__foot, .department-links, .footer-bottom, .article-byline, .article-location, .back-link, .archive-tools label, .results-heading, .archive-item__number, .loading-note {
   font-family: Arial, Helvetica, sans-serif;
@@ -130,12 +126,12 @@ h2 { margin: 7px 0 0; font-size: clamp(35px, 4vw, 55px); line-height: 1.08; lett
 .article-body { display: grid; grid-template-columns: minmax(0, 670px) minmax(180px, 250px); justify-content: center; gap: clamp(40px, 8vw, 120px); padding: 46px 0 90px; }
 .article-location { margin-bottom: 24px; font-size: 11px; font-weight: 700; letter-spacing: .1em; }
 .article-location span { margin-right: 12px; color: var(--red); }
-.article-column > p:not(.article-disclaimer) { margin: 0 0 25px; font-size: clamp(18px, 1.75vw, 21px); line-height: 1.7; }
+.article-column > p { margin: 0 0 25px; font-size: clamp(18px, 1.75vw, 21px); line-height: 1.7; }
 .first-paragraph::first-letter { float: left; margin: .06em .09em -.1em 0; font-size: 4.2em; line-height: .8; font-weight: bold; color: var(--red); }
 blockquote { margin: 38px 0; padding: 25px 5px 28px; border-top: 3px double var(--ink); border-bottom: 3px double var(--ink); font-size: clamp(27px, 3vw, 39px); font-weight: bold; line-height: 1.23; letter-spacing: -.035em; }
 blockquote span { color: var(--red); }
 .article-endmark { margin: 25px 0; color: var(--red); font-size: 22px; text-align: center; }
-.article-disclaimer { padding: 17px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font: 13px/1.6 Arial, Helvetica, sans-serif; color: var(--muted); }
+.article-credit { color: var(--red); }
 .article-aside { align-self: start; padding: 21px; border: 1px solid var(--ink); background: var(--yellow); }
 .aside-stamp { border-bottom: 1px solid var(--ink); padding: 0 0 10px; font: 900 95px/.9 Georgia, serif; letter-spacing: -.1em; }
 .aside-stamp span { color: var(--red); }
@@ -183,7 +179,6 @@ blockquote span { color: var(--red); }
   .article-aside { max-width: 350px; }
 }
 @media (max-width: 480px) {
-  .satire-banner { font-size: 10px; }
   .header-top { font-size: 8px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
   .story-grid, .story-grid--two { grid-template-columns: 1fr; }

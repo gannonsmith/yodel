@@ -124,23 +124,23 @@
     const article = articles.find((item) => item.id === id);
     if (!article) {
       document.title = "Story not found — Yodel";
-      document.querySelector('meta[name="description"]').content = "This story is unavailable. Browse Yodel's fictional dispatches.";
+      document.querySelector('meta[name="description"]').content = "This story is unavailable. Browse Yodel's dispatches.";
       container.innerHTML = `<div class="not-found"><span class="small-label">404 / LOST IN THE PRINT ROOM</span><h1>That story isn't in this edition.</h1><p>The link may be out of date, or the story may be entirely too fictional.</p><a class="button button--dark" href="archive.html">Browse all stories <span aria-hidden="true">↗</span></a></div>`;
     } else {
       const title = article.title || "Untitled story";
       const deck = article.deck || "This story's summary is unavailable.";
       document.title = `${title} — Yodel`;
-      document.querySelector('meta[name="description"]').content = `${deck} Fictional satire from Yodel.`;
+      document.querySelector('meta[name="description"]').content = `${deck} A Yodel dispatch.`;
       const related = [
         ...articles.filter((item) => item.id !== article.id && item.category === article.category),
         ...articles.filter((item) => item.id !== article.id && item.category !== article.category)
       ].slice(0, 2);
       const paragraphs = Array.isArray(article.paragraphs) ? article.paragraphs.filter((paragraph) => typeof paragraph === "string") : [];
       container.innerHTML = `<article class="article-layout">
-        <header class="article-header"><p class="story-category">${escapeHTML(article.category || "Uncategorized")} <span> / FICTIONAL DISPATCH</span></p><h1>${escapeHTML(title)}</h1><p class="article-deck">${escapeHTML(deck)}</p><div class="article-byline"><span>BY <strong>${escapeHTML((article.author || "Yodel").toUpperCase())}</strong></span><span>${escapeHTML(formatDate(article.date))}</span><span>${Number.isFinite(article.minutes) ? article.minutes : 1} MIN READ</span></div></header>
+        <header class="article-header"><p class="story-category">${escapeHTML(article.category || "Uncategorized")} <span> / YODEL DISPATCH</span></p><h1>${escapeHTML(title)}</h1><p class="article-deck">${escapeHTML(deck)}</p><div class="article-byline"><span>BY <strong>${escapeHTML((article.author || "Yodel").toUpperCase())}</strong></span><span>${escapeHTML(formatDate(article.date))}</span><span>${Number.isFinite(article.minutes) ? article.minutes : 1} MIN READ</span><span class="article-credit">AI-GENERATED · HUMAN APPROVED</span></div></header>
         <div class="article-body"><div class="article-column"><div class="article-location"><span>DATELINE</span> ${escapeHTML(article.location || "LOCATION UNAVAILABLE")}</div>
           ${paragraphs.length ? paragraphs.map((paragraph, index) => `<p${index === 0 ? ' class="first-paragraph"' : ""}>${escapeHTML(paragraph).replace(/\n/g, "<br>")}</p>${index === 1 && article.quote ? `<blockquote><span aria-hidden="true">“</span>${escapeHTML(article.quote)}<span aria-hidden="true">”</span></blockquote>` : ""}`).join("") : `<p>The story text is unavailable.</p>`}
-          <div class="article-endmark" aria-hidden="true">✳</div><p class="article-disclaimer"><strong>Editor's note:</strong> This is an invented satirical story, not a factual report. The events and quotes above did not happen.</p>
+          <div class="article-endmark" aria-hidden="true">✳</div>
         </div><aside class="article-aside"><div class="aside-stamp">Y<span>.</span></div><p class="small-label">FROM THE YODEL DESK</p><p>A real city. An imaginary story. Read with a grain of salt, preferably beside some crackers.</p><a href="archive.html?category=${encodeURIComponent(article.category || "")}">More in ${escapeHTML(article.category || "all departments")} <span aria-hidden="true">↗</span></a></aside></div>
       </article><section class="related-section" aria-labelledby="related-heading"><div class="section-heading"><div><span class="small-label">KEEP TURNING THE PAGE</span><h2 id="related-heading">Elsewhere in Yodel<span class="heading-period">.</span></h2></div><a class="underlined-link" href="archive.html">All stories <span aria-hidden="true">↗</span></a></div><div class="story-grid story-grid--two">${related.map(storyCard).join("")}</div></section>`;
     }
