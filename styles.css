@@ -226,10 +226,10 @@ main { position: relative; }
 .department-mark--food::after { width: 2px; height: 13px; left: 2px; top: 1px; box-shadow: 3px 0 0 currentColor, 0 -1px 0 currentColor, 3px -1px 0 currentColor; }
 .department-mark--transit::before { width: 4px; height: 12px; left: 2px; top: 2px; box-shadow: 7px 0 0 currentColor; }
 .department-mark--transit::after { width: 11px; height: 4px; left: 2px; top: 6px; background: var(--yellow); box-shadow: 0 0 0 1px currentColor; }
-.department-mark--workplace::before { width: 14px; height: 10px; left: 1px; top: 5px; box-shadow: inset 0 0 0 2px currentColor; }
-.department-mark--workplace::after { width: 6px; height: 4px; left: 5px; top: 1px; border: 2px solid currentColor; border-bottom: 0; box-shadow: 3px 8px 0 -1px var(--paper); }
-.department-mark--civic::before { width: 14px; height: 3px; left: 1px; top: 5px; box-shadow: 3px 3px 0 currentColor, 6px 3px 0 currentColor, 9px 3px 0 currentColor, 0 8px 0 currentColor; }
-.department-mark--civic::after { width: 0; height: 0; left: 3px; top: 1px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 4px solid currentColor; }
+.department-mark--workplace::before { width: 10px; height: 10px; left: 2px; top: 4px; border-radius: 0 0 3px 3px; }
+.department-mark--workplace::after { width: 5px; height: 6px; left: 11px; top: 6px; box-shadow: inset 0 0 0 2px var(--red); }
+.department-mark--civic::before { width: 0; height: 0; left: 3px; top: 2px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 11px solid currentColor; }
+.department-mark--civic::after { width: 14px; height: 2px; left: 1px; top: 14px; box-shadow: 3px -5px 0 var(--yellow); }
 .department-mark--general::before { width: 5px; height: 5px; left: 1px; top: 1px; box-shadow: 8px 0 0 currentColor, 4px 4px 0 currentColor, 0 8px 0 currentColor, 8px 8px 0 currentColor; }
 .department-mark--terminal::before { width: 14px; height: 10px; left: 1px; top: 2px; box-shadow: inset 0 0 0 2px currentColor; }
 .department-mark--terminal::after { width: 8px; height: 2px; left: 4px; top: 14px; }
