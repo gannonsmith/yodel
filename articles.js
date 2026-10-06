@@ -63,23 +63,19 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "fantasy-trade-negotiations",
     category: "Sports",
-    title: "Fantasy Football Trade Negotiations Enter Third Week Without Anyone Naming an Actual Player",
-    deck: "Managers continue exchanging vague accusations, screenshots, and references to “value.”",
+    title: "The Trade Is About Two Players. The Argument Is About Who Can Count.",
+    deck: "One proposed swap of running backs becomes a referendum on fairness, intelligence, and the proper use of the word “upside.”",
     author: "Yodel Desk",
     date: "2026-10-03",
-    minutes: 3,
-    location: "CINCINNATI, FICTIONALLY",
-    quote: "You know what you need to do.",
+    minutes: 2,
+    location: "FANTASY LEAGUE CHAT",
+    quote: "The part where you think that’s close.",
     paragraphs: [
-      "Trade negotiations in a local fantasy football league entered their third consecutive week Monday, despite neither side having formally identified a player they would like to acquire.",
-      "The negotiations began when one manager sent a message reading, “You know what you need to do,” followed by a screenshot of their roster and a thumbs-up emoji.",
-      "“I thought we were close,” said fictional manager Tyler Morgan. “Then he sent me a ranking from a website I’ve never heard of and said I was clearly acting in bad faith.”",
-      "According to league records, the two managers have exchanged 47 messages, six screenshots, three reaction GIFs, and one poll asking whether a trade should be “fun” or “fair.” No offer has been submitted.",
-      "At one point, one manager reportedly typed the phrase “I’m not giving up my whole team” despite the other manager never asking for any players.",
-      "League officials say the dispute has now expanded beyond football. The managers have begun debating each other’s drafting philosophies, commitment to research, and general character.",
-      "“I offered to discuss running backs,” said one participant. “He brought up what happened in the 2022 draft.”",
-      "The league commissioner has urged both sides to either make a concrete proposal or move on. The request was met with a 12-minute voice memo titled JUST HEAR ME OUT.",
-      "At press time, negotiations remained active, with both managers reportedly waiting for the other to “show seriousness.”"
+      "Mara: “Would you do Ellis for Dane?”\nCal: “That’s not close.”\nMara: “Which part?”\nCal: “The part where you think that’s close.”",
+      "The players’ names remain in the chat, technically. They are soon joined by “market value,” “watch the games,” and “I’m not new to this,” each carrying more emotional weight than either running back.",
+      "Cal sends a screenshot of a rankings page. Mara replies with a different rankings page. Both have found a source confirming what they already knew: the other person is bad at this. The trade itself has not moved.",
+      "“Fair offer,” Mara says, revising the proposal by one bench player. Cal calls it “a start,” though nothing has started except a second argument about whether “fair” means equal, reasonable, or something only people who understand value can recognize.",
+      "By evening, they agree the deal could work if the other side added a pick. Neither will say which pick, because that would return the conversation to the players."
     ]
   },
   {
