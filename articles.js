@@ -102,21 +102,19 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "kroger-fuel-points",
     category: "Consumer Affairs",
-    title: "Local Kroger Shopper Earns Enough Fuel Points to Save 14 Cents on a $70 Grocery Bill",
-    deck: "After months of loyalty-program devotion, one customer celebrates a discount too small to affect the emotional damage of grocery shopping.",
+    title: "Rewards Statement: You Made It Work",
+    deck: "The fuel discount was small. Getting it took a week of decisions.",
     author: "Yodel Desk",
     date: "2026-10-01",
-    minutes: 3,
-    location: "CINCINNATI, FICTIONALLY",
-    quote: "I felt like the system finally saw me.",
+    minutes: 2,
+    location: "REWARDS ACCOUNT",
+    quote: "The program supplied the terms; you supplied the labor.",
     paragraphs: [
-      "After months of carefully scanning loyalty cards, timing purchases, and purchasing products he did not particularly want, local shopper Brian Keller celebrated Tuesday after earning enough Kroger fuel points to reduce his $70 grocery bill by 14 cents.",
-      "“I felt like the system finally saw me,” Keller said, standing beside his receipt and a single discounted gallon of gasoline. “For a moment, all the digital coupons were worth it.”",
-      "Keller began collecting points in March after discovering that certain purchases could earn bonus rewards. Since then, he has bought six varieties of yogurt, three packages of snack crackers, and what he described as “an alarming amount of bottled water.”",
-      "The savings were applied automatically at a nearby fuel center, where Keller watched the price change from $3.119 per gallon to $3.109. “I actually took a picture,” he said. “It was the first time a grocery purchase had produced a measurable financial victory.”",
-      "Kroger representatives praised Keller’s dedication, noting that the fuel-points program allows shoppers to convert complex purchasing behavior into discounts that are “small, immediate, and emotionally significant.”",
-      "Keller said he plans to continue accumulating points, though he acknowledged that the program has already caused him to reorganize his weekly shopping around offers for items his household does not need. “I’m not saying I bought the family-size pretzels because of the points,” he said. “I’m saying the points made the pretzels feel inevitable.”",
-      "At press time, Keller was reportedly 86 points away from saving 10 cents per gallon, provided he spent at least $400 on qualifying purchases before the end of the month."
+      "EARNED\nYou came in for eggs. The points offer applied to a larger basket, so you left with eggs, a jar of salsa you don’t eat, and the mild satisfaction of having made the basket work. The salsa has since become a fixture of the refrigerator door.",
+      "ADJUSTMENT\nThe next shop moved to Tuesday because Tuesday was better for points. Dinner moved with it. So did the errand to a store farther from home. The extra drive was, technically, part of the savings plan.",
+      "REDEMPTION\nAt the pump, the discount was real and too small to revise the grocery total in retrospect. It did arrive after several days of decisions made in its name.",
+      "ACCOUNT SUMMARY\nThe statement calls this savings. It doesn’t include the items bought to earn them, or the time spent checking whether the trip counted. That omission makes the result look clean.",
+      "CLOSING BALANCE\nYou leave with less spent on fuel, a full trunk, and proof—printed just below the total—that your choices were yours. The program supplied the terms; you supplied the labor."
     ]
   },
   {
