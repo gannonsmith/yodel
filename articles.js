@@ -1,6 +1,29 @@
 // Editorial copy lives here; the three pages all read from this one local source.
 window.YODEL_ARTICLES = Object.freeze([
   {
+    id: "ohio-data-centers-electricity",
+    category: "Technology",
+    title: "Ohio Data Centers Reassure Residents They’ll Only Need Most of the Electricity",
+    deck: "Developers say concerns about power bills, water use, and grid capacity are “mostly a matter of perspective.”",
+    author: "Yodel Desk",
+    date: "2026-10-06",
+    minutes: 4,
+    location: "COLUMBUS, FICTIONALLY",
+    quote: "People hear that a hyperscale facility can use as much electricity as 100,000 homes and become alarmed.",
+    paragraphs: [
+      "Ohio data-center developers attempted to reassure residents Tuesday that the state’s rapidly expanding artificial-intelligence infrastructure would require only “most” of the electricity, water, land, and public patience currently available.",
+      "“People hear that a hyperscale facility can use as much electricity as 100,000 homes and become alarmed,” said fictional industry spokesperson Grant Pemberton. “But when you compare that to the number of homes in Ohio, it’s actually a very comforting percentage.”",
+      "The reassurance follows months of debate over data centers, which supporters describe as engines of investment and technological progress. Critics have raised questions about electricity prices, transmission upgrades, water use, farmland, tax incentives, and whether residents should help pay for infrastructure primarily needed by billion-dollar technology companies.",
+      "Pemberton said the industry was listening carefully to those concerns and had prepared a helpful chart showing how much power would remain after the next wave of facilities came online.",
+      "The chart consisted mostly of a red area.",
+      "“We want Ohioans to know that their lights will remain on in all but the most exceptional circumstances,” Pemberton said. “And even then, there should be enough ambient glow from the data centers to read by.”",
+      "Developers also addressed concerns about water consumption, explaining that the facilities would use water primarily for cooling computers that are being used to generate increasingly confident answers about how to conserve water.",
+      "When asked who would pay for new transmission lines and other grid upgrades, Pemberton said the industry supported a collaborative approach involving utilities, regulators, local governments, ratepayers, and “anyone who happens to be standing nearby when the invoice arrives.”",
+      "State officials emphasized that data centers could bring investment and jobs, while consumer advocates argued that extraordinary new electricity demand should not shift costs onto ordinary households. Several lawmakers have proposed requiring large data-center customers to cover the costs they create.",
+      "At press time, Ohio residents were being encouraged to view the data-center boom as an exciting opportunity, provided they did not look too closely at their electric bills or ask where the cooling water had gone."
+    ]
+  },
+  {
     id: "bengals-path-to-12-5",
     category: "Sports",
     title: "Bengals Fan Updates Spreadsheet to Track Every Possible Path From 2–2 to 12–5",
