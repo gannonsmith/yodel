@@ -120,19 +120,19 @@ window.YODEL_ARTICLES = Object.freeze([
   {
     id: "cincinnati-hills-escalators",
     category: "Civic Life",
-    title: "Cincinnati Hills File Joint Request for Escalators, Cite \"Excessive Verticality\"",
-    deck: "Neighborhood inclines say they are tired of being treated like a personality test.",
+    title: "Walking Directions for a Destination That’s “Three Blocks Away”",
+    deck: "An honest neighborhood guide to distance, elevation, and the optimism of the person who called it walkable.",
     author: "Yodel Desk",
     date: "2026-09-30",
-    minutes: 3,
-    location: "CINCINNATI, FICTIONALLY",
-    quote: "We appreciate that people call us scenic, but scenic is not a substitute for accessibility.",
+    minutes: 2,
+    location: "UPHILL, CINCINNATI",
+    quote: "The hill is not a block, but it will take the rest of the walk personally.",
     paragraphs: [
-      "Several Cincinnati hills have submitted a joint request for escalators, citing what they describe as an “unsustainable level of verticality” and a growing public expectation that arriving somewhere should not require a personal narrative.",
-      "The fictional petition, signed by hills across the city, asks for a pilot escalator connecting “the part people say is close” with “the part that is technically only three blocks away.” The proposal would include rest platforms, handrails, and a small display showing how much elevation a resident has emotionally overcome.",
-      "“We appreciate that people call us scenic,” said one representative of the entirely imaginary Cincinnati Incline Coalition. “But scenic is not a substitute for accessibility, and neither is telling someone they are almost there.”",
-      "City planners are reportedly studying several routes, including one that would move pedestrians uphill while allowing downhill travelers to descend on a slow, dignified conveyor belt. A separate proposal would install a button at the bottom labeled I HAVE RECONSIDERED MY PLANS.",
-      "The hills emphasized that they are not asking to be flattened. They would simply like to participate in the modern workplace by becoming a little less of a surprise. For now, residents should continue using the existing sidewalks, stairs, and motivational texts from friends."
+      "THE ESTIMATE\n“Three blocks away” describes the route on a map, where streets have the decency to stay flat. On foot, the destination is three blocks away plus the hill, which is not a block but will take the rest of the walk personally.",
+      "THE APPROACH\nStart out at a normal pace. This is how the directions were given: by someone who has already arrived, or is remembering the climb as a series of manageable decisions.",
+      "THE ASCENT\nAs the street tilts, “just up the hill” becomes less a location than a revision of your plans. You may find yourself conserving conversation for the level ground. There is no level ground in the immediate forecast.",
+      "THE ARRIVAL\nAt the top, the destination is indeed close. It was close the whole time, in the sense that a thing can be near you while requiring a different version of you to reach it.",
+      "FOR NEXT TIME\nWhen someone says a place is walkable, ask whether they mean the distance or the effort. If they say “three blocks,” ask which direction the blocks are leaning."
     ]
   },
   {
