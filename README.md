@@ -2,8 +2,6 @@
 
 ## Archive notice
 
-Yodel has stopped publishing and this public repository is preserved as an archive.
-
-The project began as an experiment in AI-assisted satire. We concluded that public writing should retain human judgment, personality, and care—not merely pursue volume. No new stories or features are planned.
+I stopped publishing Yodel because I want public writing to carry human judgment, personality, and care. The project began as an experiment in AI-assisted satire, but I do not want to publish simply for volume. The repository and source remain available as an archive.
 
 The existing site and source remain available for reference.
